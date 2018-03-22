@@ -38,7 +38,9 @@ Call function weatherOutput
 function handleWeatherInfo() {
   if (
     geo_info_object.city !== undefined ||
-    geo_info_object.state !== undefined
+    geo_info_object.state !== undefined ||
+    geo_info_object.city !== null ||
+    geo_info_object.state !== null
   ) {
     $.ajax({
       method: 'get',
