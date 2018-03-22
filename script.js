@@ -36,7 +36,6 @@ Call function weatherOutput
  */
 
 function handleWeatherInfo() {
-  debugger;
   if (geo_info_object.lat === null || geo_info_object.lon === null) {
     $('#weatherIcon').attr('src', 'images/weather_icon/sadFace.png');
     weatherOutputWithoutData();
@@ -346,7 +345,7 @@ function getAqiData(keyword) {
         $('.c_statement').text(
           'No cautionary statements at this time, please try again later.'
         );
-        debugger;
+
         $('#aqi-number-container').css({
           'background-color': '#80d6f9'
         });
