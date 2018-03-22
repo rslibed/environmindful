@@ -36,11 +36,15 @@ Call function weatherOutput
  */
 
 function handleWeatherInfo() {
+  debugger;
+  if (geo_info_object.lat === null || geo_info_object.lon === null) {
+    $('#weatherIcon').attr('src', 'images/weather_icon/sadFace.png');
+    weatherOutputWithoutData();
+    return;
+  }
   if (
     geo_info_object.city !== undefined ||
-    geo_info_object.state !== undefined ||
-    geo_info_object.lat !== null ||
-    geo_info_object.lon
+    geo_info_object.state !== undefined
   ) {
     $.ajax({
       method: 'get',
